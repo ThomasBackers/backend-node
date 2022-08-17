@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "commonjs",
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "baseUrl": "./src",
+    "esModuleInterop": true,
+    "paths": {
+      "@/api/*": ["api/*"],
+      "@/controllers/*": ["api/controllers/*"],
+      "@/middlewares/*": ["api/middlewares/*"],
+      "@/models/*": ["api/models/*"],
+      "@/routes/*": ["api/routes/*"]
+    }
+  }
+}
