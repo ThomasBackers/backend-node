@@ -7,11 +7,12 @@
     "baseUrl": "./src",
     "esModuleInterop": true,
     "paths": {
-      "@/api/*": ["api/*"],
-      "@/controllers/*": ["api/controllers/*"],
-      "@/middlewares/*": ["api/middlewares/*"],
-      "@/models/*": ["api/models/*"],
-      "@/routes/*": ["api/routes/*"]
+      "@/app/*": ["app/*"],
+      "@/controllers/*": ["app/controllers/*"],
+      "@/database/*": ["app/database/*"],
+      "@/middlewares/*": ["app/middlewares/*"],
+      "@/models/*": ["app/models/*"],
+      "@/routes/*": ["app/routes/*"]
     }
   }
 }

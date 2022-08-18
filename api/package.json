@@ -4,10 +4,10 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "predev": "node scripts/fixModuleAliases.js -D",
+    "predev": "node node_scripts/fixModuleAliases.js -D",
     "preview": "ts-node ./src/index.ts",
     "dev": "nodemon",
-    "prebuild": "node scripts/fixModuleAliases.js -P",
+    "prebuild": "node node_scripts/fixModuleAliases.js -P",
     "build": "rm -rf dist/* && npx tsc",
     "start": "yarn run build && node ./dist/index.js"
   },
@@ -15,6 +15,7 @@
     "bcrypt": "^5.0.1",
     "dotenv": "^16.0.1",
     "express": "^4.18.1",
+    "helmet": "^5.1.1",
     "module-alias": "^2.2.2",
     "sequelize": "^6.21.3",
     "sqlite3": "^5.0.11"
@@ -34,10 +35,11 @@
     "typescript": "^4.7.4"
   },
   "_moduleAliases": {
-    "@/api": "src/api",
-    "@/controllers": "src/api/controllers",
-    "@/middlewares": "src/api/middlewares",
-    "@/models": "src/api/models",
-    "@/routes": "src/api/routes"
+    "@/app": "src/app",
+    "@/controllers": "src/app/controllers",
+    "@/database": "src/app/database",
+    "@/middlewares": "src/app/middlewares",
+    "@/models": "src/app/models",
+    "@/routes": "src/app/routes"
   }
 }
